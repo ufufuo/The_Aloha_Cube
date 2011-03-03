@@ -21,7 +21,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>the Aloha Cube</title>
 	<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
-	<script src="jquery-ui-1.8.9.custom.min.js"></script>
+	<script src="scripts/jquery-ui-1.8.9.custom.min.js"></script>
+	<script src="scripts/MacStyleDock.js"></script>
 	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
 	
 	<script type="text/javascript" src="aloha/aloha.js"></script>
@@ -384,6 +385,12 @@ canvas#indicator{
 	padding:10px;
 }
 
+#twitterbar {
+	position:absolute;
+	top:5px;
+	left:5px;
+}
+
 </style>	
 
 </head>
@@ -592,6 +599,86 @@ function initKeys(){
 		}
 	});
 }
+
+/* twitter dock */
+
+/* //--> unstiled and the scripts/MacStyleDock.js has to be rewritten for right implementation
+
+var dock = new MacStyleDock(
+	document.getElementById('twitterbar'),
+	[
+	{
+		name      : 'http://a0.twimg.com/profile_images/1246935563/passport_photo_',
+		extension : '.jpg',
+		sizes     : ['mini', 'small_normal'],
+		onclick   : function(){ 
+                        window.location = 'http://twitter.com/#!/ufufuo';
+                      }
+        },
+        {
+        	name      : 'http://a1.twimg.com/profile_images/69881019/haymo_grey_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/draftkraft';
+                      }
+        },
+        {
+        	name      : 'http://a3.twimg.com/profile_images/92915898/twitterlogo_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/blacktarmac';
+                      }
+        },
+        {
+        	name      : 'http://a0.twimg.com/profile_images/277070804/n206700536_30532208_8076_copy_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/balupton';
+                      }
+        },
+        {
+        	name      : 'http://a2.twimg.com/profile_images/1175951166/avatar1_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/nka_11';
+                      }
+        },
+        {
+        	name      : 'http://a1.twimg.com/profile_images/1041686326/thomas3_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/taoma_k';
+                      }
+        },
+        {
+        	name      : 'http://a0.twimg.com/profile_images/854919519/rene_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/rene_kapusta';
+                      }
+        },
+        {
+        	name      : 'http://a0.twimg.com/profile_images/1170653292/bergie_haydarpasa2_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/bergie';
+                      }
+        }
+	],
+	12,
+	48,
+	2);
+*/
+  
+/* /twitter dock */
+
 
 /* MO */
 var cX = 0;
