@@ -2,7 +2,7 @@
 
 /*******************************************************************************
 *                                                                              *
-*   Aloha // IKS  conference  hacking  demo                                    *
+*   Aloha Editor developer conference at Gentics in Vienna 2011                *
 *                                                                              *
 *   created and idea by Daniel Scherrer 2011                                   *
 *   Aloha Editor Menu Desgin for TYPO3 by Jens Hoffmann                        *
@@ -20,8 +20,10 @@
 	<meta http-equiv="author" content="Daniel Scherrer (http://twitter.com/#!/ufufuo)" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>the Aloha Cube</title>
-	<script src="jquery-1.5.min.js"></script>
-	<script>GENTICS_Aloha_base="aloha/";</script>
+	<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
+	<script src="jquery-ui-1.8.9.custom.min.js"></script>
+	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
+	
 	<script type="text/javascript" src="aloha/aloha.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Format/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Table/plugin.js"></script>
@@ -34,7 +36,6 @@
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.DragAndDropFiles/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Image/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.VIE/plugin.js"></script>
-	<script src="jquery-ui-1.8.9.custom.min.js"></script>
 	<style type="text/css">
 
 .MAITEM_Filimg1{
