@@ -349,3 +349,16 @@ canvas#indicator{
 	top:5px;
 	left:5px;
 }
+
+#twitterbar p {
+	clear:both;
+}
+
+#twitterbar p img {
+	float: left;
+	width: 40px;
+}
+#twitterbar p span {
+	float: left;
+	width:200px;
+}

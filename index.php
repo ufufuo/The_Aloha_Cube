@@ -33,7 +33,6 @@
 	<link rel="stylesheet" type="text/css" href="css/cube.css" />
 </head>
 <body id="chbg">
-	http://www.gravatar.com/avatar/<?php echo md5(strtolower(trim("gernot.bernkopf@netural.com")));?>.jpg
 <div id="twitterbar">
 <p><a href="http://haymo.org"><img src="http://www.gravatar.com/avatar/7f3f1e000b09a2314b5261de53de0733.jpg" /><br />Haymo Meran</a></p>
 <p><a href="http://twitter.com/blacktarmac"><img src="http://www.gravatar.com/avatar/c84901471a3d6c401c37239dda64c6ff.jpg" /><br />Clemens Prerovsky</a></p>
@@ -45,7 +44,7 @@
 <p><a href="http://www.reaklab.com"><img src="http://www.gravatar.com/avatar/ba0551674de01922abdb4724831e66bb.jpg" /><br />Romain Carlier</a></p>
 <p><a href="http://twitter.com/rene_kapusta"><img src="http://www.gravatar.com/avatar/1b9509152c6e76062860a80bdfa02529.jpg" /><br />Rene Kapusta</a></p>
 <p><a href="http://petrosalema.com"><img src="http://www.gravatar.com/avatar/2087327e79d09b56ce8572e6f363abff.jpg" /><br />Petro Salema</a></p>
-<p><a href="http://bergie.iki.fi"><img src="http://nemein.com/en/midcom-serveattachmentguid-1df22b90b65b14422b911df835f25030ee37b967b96/thumbnail_bergie_haydarpasa3.jpg" /><br />Henri Bergius</a></p>
+<p><a href="http://bergie.iki.fi"><img src="http://www.gravatar.com/avatar/2feffe1e8a2503a2f7b7585837541126.jpg" /><br />Henri Bergius</a></p>
 <p><a href="http://twitter.com/webcms"><img src="http://www.gravatar.com/avatar/7f3f1e000b09a2314b5261de53de0733.jpg" /><br />Klaus-M. Schremser</a></p>
 <p><a href="http://twitter.com/medenhofer"><img src="http://www.gravatar.com/avatar/986577dceaa4a3a534b0832b8c2c4471.jpg" /><br />Martin Edenhofer</a></p>
 <p><a href="http://twitter.com/rworth"><img src="http://www.gravatar.com/avatar/d92ea7772f465256ad836de1ce642b37.jpg" /><br />Richard D. Worth</a></p>
@@ -55,16 +54,16 @@
 <p><a href="http://twitter.com/bassistance"><img src="http://www.gravatar.com/avatar/a9d4d2558b560b0ef168ced0f6c5198c.jpg" /><br />Jörn Zaefferer</a></p>
 <p><a href="http://gentics.com"><img src="http://www.gravatar.com/avatar/92df2d6cd31e77059362aabbf9bbc543.jpg" /><br />Norbert Pomaroli</a></p>
 <p><a href="http://www.salzburgresearch.at"><img src="http://www.gravatar.com/avatar/225267813448c9526a9875cc98a95137.jpg" /><br />Szaby Grünwald</a></p>
-<p><a href="http://www.netural.com"><img src="http://www.gravatar.com/avatar/81d3137c1fdc6f61fc450a3484b82d69.jpg" /><br />Gernot Bernkopf</a></p>
-<p><a href="http://tapo-it.at"><img src="" /><br />Herbert Poul</a></p>
-<p><a href="http://gentics.com"><img src="" /><br />Christian Peschta </a></p>
+<p><a href="http://www.netural.com"><img src="http://www.gravatar.com/avatar/e9ab5ef68e31441015bb5ddb609d773b.jpg" /><br />Gernot Bernkopf</a></p>
+<p><a href="http://tapo-it.at"><img src="http://www.gravatar.com/avatar/adf82dd802db2959d2f74647851a0e72.jpg" /><br />Herbert Poul</a></p>
+<p><a href="http://gentics.com"><img src="http://www.gravatar.com/avatar/cd15975fdb1916ad8208fcc167004f6a.jpg" /><br />Christian Peschta </a></p>
 <p><a href="http://twitter.com/#!/ufufuo"><img src="http://www.gravatar.com/avatar/f5170db042f5011c63e9a3cc1b03f9d7.jpg" /><br />Daniel Scherrer</a></p> 
-<p><a href="http://score.loria.fr"><img src="" /><br />Bogdan Flueras</a></p>
-<p><a href="http://www.dfki.de/~germesin"><img src="" /><br />Sebastian Germesin</a></p>
-<p><a href="http://www.fb-berlin.de"><img src="" /><br />Jan Koch</a></p>
-<p><a href="http://www.intergraph.com/global/at/"><img src="" /><br />Franz Buchinger</a></p>
-<p><a href=""><img src="" /><br />Stefan Dotti</a></p>
-<p><a href="http://www.segments.at"><img src="" /><br />Ivo Radulovski</a></p></div>
+<p><a href="http://score.loria.fr"><img src="http://www.gravatar.com/avatar/6c5141bfa6b346317d8e7039db01d523.jpg" /><br />Bogdan Flueras</a></p>
+<p><a href="http://www.dfki.de/~germesin"><img src="http://www.gravatar.com/avatar/27d33088709f6305bf27989003387e9f.jpg" /><br />Sebastian Germesin</a></p>
+<p><a href="http://www.fb-berlin.de"><img src="http://www.gravatar.com/avatar/46f1a05e348d4e1abff4f3f563d20729.jpg" /><br />Jan Koch</a></p>
+<p><a href="http://www.intergraph.com/global/at/"><img src="http://www.gravatar.com/avatar/b9dc190129a9515cac284929a9bca2b7.jpg" /><br />Franz Buchinger</a></p>
+<p><a href="#whereShouldWeLink?"><img src="http://www.gravatar.com/avatar/425de47bfc45d8b7d2d2811b68202ed6.jpg" /><br />Stefan Dotti</a></p>
+<p><a href="http://www.segments.at"><img src="http://www.gravatar.com/avatar/741c5eab158a8e6019103af74ff70979.jpg" /><br />Ivo Radulovski</a></p></div>
 
 <!--
 <script src="scripts/MacStyleDock.js"></script>
