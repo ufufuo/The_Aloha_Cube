@@ -39,35 +39,6 @@
 	var TheAlohaCube = window.TheAlohaCube = {
 
 		/**
-		 * Handle Storage of Data
-		 */
-		Storage: {
-
-			/**
-			 * Get an Item from Storage
-			 * @param {String} key
-			 * @return {String} value
-			 */
-			get: function (key) {
-				var value = amplify.store(key);
-				return value;
-			},
-
-			/**
-			 * Store an Item in Storage
-			 * @param {String} key
-			 * @param {String} value
-			 * @return {Boolean} success
-			 */
-			set: function (key, value) {
-				var result = amplify.store(key,value);
-				return result;
-			}
-
-		// </Storage>
-		},
-
-		/**
 		 * Do Something
 		 */
 		drawIndicator: function ( ) {
@@ -103,6 +74,22 @@
 		 * Initialise the Keys and Make the Cube Interactive
 		 */
 		initKeys: function ( ) {
+			// Save updates to the local storage section
+			var save = function(){
+				TheAlohaCube.save();
+			};
+			$('#local_storage').blur(save).change(save);
+
+			// Add Save Button
+			$('#savels').bind('click', function() {
+				TheAlohaCube.save();
+			});
+
+			// Add Delete Button
+			$('#dells').bind('click', function() {
+				TheAlohaCube.reset();
+			});
+
 			// Toggle Information with Canvas
 			$('#trigger_canvas')
 				.mouseout(function(){
@@ -143,7 +130,7 @@
 					case 17: // ctrl
 						if (cubeZoom == 0){cubeZoom = 1}else{cubeZoom = 0}
 						$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distBig*multi+"px)");
-						delay(2000);
+						//delay(2000);
 						$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd*multi+"px)");
 
 					case 18: // alt
@@ -284,7 +271,9 @@
 		 * Restore the Saveable Content
 		 */
 		restore: function(){
-			$('#local_storage').html(TheAlohaCube.Storage.get('cubeLSdemo'));
+			var value = amplify.store('cube');
+			console.log('restore',value);
+			$('#local_storage').html(value);
 			return true;
 		},
 
@@ -292,7 +281,9 @@
 		 * Store the Saveable Content
 		 */
 		save: function(){
-			TheAlohaCube.Storage.set('cubeLSdemo', $('#local_storage').html());
+			var value = $('#local_storage').html();
+			console.log('set',value);
+			amplify.store('cube',value);
 			return true;
 		},
 
@@ -300,6 +291,7 @@
 		 * Reset the Saveable Content
 		 */
 		reset: function(){
+			console.log('reset');
 			$('#local_storage').html('');
 			TheAlohaCube.save();
 			return true;
@@ -324,21 +316,6 @@
 		onDomReady: function(){
 			// Make the content editable
 			$('.editable').aloha();
-
-			// Save updates to the local storage section
-			$('#local_storage').change(function(){
-				TheAlohaCube.save();
-			});
-
-			// Add Save Button
-			$('#savels').bind('click', function() {
-				TheAlohaCube.save();
-			});
-
-			// Add Delete Button
-			$('#dells').bind('click', function() {
-				TheAlohaCube.reset();
-			});
 
 			// Initialise the Cube System
 			setTimeout(function(){
