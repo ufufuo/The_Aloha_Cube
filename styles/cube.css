@@ -1,41 +1,41 @@
 .MAITEM_Filimg1{
-	background-image:url(pix/pic1_thumb.png);
+	background-image:url(../pix/pic1_thumb.png);
 	background-repeat:no-repeat;
 	height:44px;
 	width:54px;
 }
 .MAITEM_Filimg2{
-	background-image:url(pix/pic2_thumb.png);
+	background-image:url(../pix/pic2_thumb.png);
 	background-repeat:no-repeat;
 	height:44px;
 	width:54px;
 }
 .MAITEM_Filimg3{
-	background-image:url(pix/pic3_thumb.jpg);
+	background-image:url(../pix/pic3_thumb.jpg);
 	background-repeat:no-repeat;
 	height:44px;
 	width:54px;
 }
 .MAITEM_Filimg4{
-	background-image:url(pix/pic4_thumb.jpg);
+	background-image:url(../pix/pic4_thumb.jpg);
 	background-repeat:no-repeat;
 	height:44px;
 	width:54px;
 }
 .MAITEM_Filimg5{
-	background-image:url(pix/pic5_thumb.jpg);
+	background-image:url(../pix/pic5_thumb.jpg);
 	background-repeat:no-repeat;
 	height:44px;
 	width:54px;
 }
 .MAITEM_Filimg6{
-	background-image:url(pix/pic6_thumb.jpg);
+	background-image:url(../pix/pic6_thumb.jpg);
 	background-repeat:no-repeat;
 	height:44px;
 	width:54px;
 }
 .MAITEM_Filimg7{
-	background-image:url(pix/pic7_thumb.jpg);
+	background-image:url(../pix/pic7_thumb.jpg);
 	background-repeat:no-repeat;
 	height:44px;
 	width:54px;
@@ -133,7 +133,7 @@ a:hover{
 }
 
 #cube .one  {
-	background-image:url(logos/logo_1.png);
+	background-image:url(../logos/logo_1.png);
 	-webkit-transform: rotateX(90deg) translateZ(256px);
 	-moz-transform: rotateX(90deg) translateZ(256px);
 	-o-transform: rotateX(90deg) translateZ(256px);
@@ -148,7 +148,7 @@ a:hover{
 }
 #cube #startEl {
 	position: absolute;
-	background-image:url(logos/logo_main.png);
+	background-image:url(../logos/logo_main.png);
 	width:512px;
  	height:512px;
  	z-index:4;
@@ -182,7 +182,7 @@ a:hover{
 
 #cube .two .content {
 	position: absolute;
-	background-image:url(logos/logo_4.png);
+	background-image:url(../logos/logo_4.png);
 	z-index:2;
 }
 #cube .three {
@@ -193,14 +193,14 @@ a:hover{
 	text-align:center;
 }
 #cube .four {
-	background-image:url(logos/logo_2.png);
+	background-image:url(../logos/logo_2.png);
 	-webkit-transform: rotateY(180deg) translateZ(256px);
 	-moz-transform: rotateY(180deg) translateZ(256px);
 	-o-transform: rotateY(180deg) translateZ(256px);
 	transform: rotateY(180deg) translateZ(256px);
 }
 #cube .five {
-	background-image:url(logos/logo_5.png);
+	background-image:url(../logos/logo_5.png);
 	-webkit-transform: rotateY(-90deg) translateZ(256px);
 	-moz-transform: rotateY(-90deg) translateZ(256px);
 	-o-transform: rotateY(-90deg) translateZ(256px);
@@ -209,7 +209,7 @@ a:hover{
  	height:512px;
 }
 #cube .six {
-	background-image:url(logos/logo_6.png);
+	background-image:url(../logos/logo_6.png);
 	-webkit-transform: rotateX(-90deg) translateZ(256px);
 	-moz-transform: rotateX(-90deg) translateZ(256px);
 	-o-transform: rotateX(-90deg) translateZ(256px);

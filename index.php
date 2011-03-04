@@ -21,7 +21,6 @@
 
 	<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
 	<script src="scripts/jquery-ui-1.8.9.custom.min.js"></script>
-	<script src="scripts/MacStyleDock.js"></script>
 	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
 
 	<!-- load Aloha Editor core. You may need to adjust the base path. -->
@@ -38,11 +37,14 @@
 	<script src="aloha/plugins/com.gentics.aloha.plugins.Media/plugin.js"></script>
 	<script src="aloha/plugins/com.gentics.aloha.plugins.DragAndDropFiles/plugin.js"></script>
 	<script src="aloha/plugins/com.gentics.aloha.plugins.Image/plugin.js"></script>
-	<style type="text/css" href="styles/cube.css"></style>
+	<link rel="stylesheet" type="text/css" href="styles/cube.css" />
 
 </head>
 <body id="chbg">
+<!--
 <div id="twitterbar"></div>
+<script src="scripts/MacStyleDock.js"></script>
+-->
 <div id="spacing"></div>
 <div id="test">
 	<div id="cube">

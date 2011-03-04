@@ -142,7 +142,7 @@ function initKeys(){
 /* twitter dock */
 
  //--> unstiled and the scripts/MacStyleDock.js has to be rewritten for right implementation
-
+/*
 var dock = new MacStyleDock(
 	document.getElementById('twitterbar'),
 	[
@@ -214,7 +214,7 @@ var dock = new MacStyleDock(
 	12,
 	48,
 	2);
-
+*/
 
 /* /twitter dock */
 
