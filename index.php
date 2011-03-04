@@ -1,44 +1,36 @@
-<?php
-
-/*******************************************************************************
-*                                                                              *
-*   Aloha Editor developer conference at Gentics in Vienna 2011                *
-*                                                                              *
-*   created and idea by Daniel Scherrer 2011                                   *
-*   modified by Haymo Meran (http://twitter.com/draftkraft)                    *
-*   Aloha Editor Menu Desgin for TYPO3 by Jens Hoffmann                        *
-*   Aloha Editor Menu Desgin Implementation by Berit Jensen                    *
-*                                                                              *
-*******************************************************************************/
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US" id="aloha-cube">
 <head>
+	<!-- Meta -->
 	<meta http-equiv=content-type content='text/html; charset=utf-8' />
 	<meta http-equiv="author" content="Daniel Scherrer (http://twitter.com/ufufuo)" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>the Aloha Cube</title>
+	<title>The Aloha Cube</title>
 
-	<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
-	<script src="scripts/jquery-ui-1.8.9.custom.min.js"></script>
-	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
+	<!-- Dependencies -->
+	<script src="vendor/jquery-1.5.1.min.js"></script>
+	<script src="vendor/jquery-ui-1.8.9.custom.min.js"></script>
+	<script src="vendor/jquery.color.js"></script>
+	<script src="vendor/amplify/core/amplify.core.js"></script>
+	<script src="vendor/amplify/store/amplify.store.js"></script>
 
-	<!-- load Aloha Editor core. You may need to adjust the base path. -->
-	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
-	<script src="aloha/aloha.js"></script>
+	<!-- Aloha Editor: Compiled Development Version -->
+	<script>GENTICS_Aloha_base = document.location.href.replace(/^\//,'') + "/vendor/aloha/";</script>
+	<script src="vendor/aloha/aloha.js"></script>
 
-	<!-- We did not concatenate the script to give you an overview about what is loaded. -->
-	<script src="aloha/plugins/com.gentics.aloha.plugins.Format/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.Table/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.List/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.Link/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.Ribbon/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.HighlightEditables/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.Media/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.DragAndDropFiles/plugin.js"></script>
-	<script src="aloha/plugins/com.gentics.aloha.plugins.Image/plugin.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles/cube.css" />
+	<!-- Aloha Editor PLugins -->
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.Format/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.Table/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.List/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.Link/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.Ribbon/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.HighlightEditables/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.Media/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.DragAndDropFiles/plugin.js"></script>
+	<script src="vendor/aloha/plugins/com.gentics.aloha.plugins.Image/plugin.js"></script>
 
+	<!-- Demo: Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/cube.css" />
 </head>
 <body id="chbg">
 	http://www.gravatar.com/avatar/<?php echo md5(strtolower(trim("gernot.bernkopf@netural.com")));?>.jpg
@@ -77,6 +69,7 @@
 <!--
 <script src="scripts/MacStyleDock.js"></script>
 -->
+
 <div id="spacing"></div>
 <div id="test">
 	<div id="cube">
@@ -99,7 +92,7 @@
 		<div id="frontfloat" class="editable">
 
 		</div>
-		<div id="trigger_canvas" onmouseover="ShowContent('infobox'); return true;" onmouseout="HideContent('infobox'); return true;">turn canvas on</div>
+		<div id="trigger_canvas">turn canvas on</div>
 		<!-- should use webworker for this but they don't have access to DOM :-/ -->
 		<div class="info" id="infobox">JavaScript animated Canvas-elements use a large amount of processor power!<br>(only for fast devices)</div>
 		<div class="face three" id="face3">
@@ -118,7 +111,7 @@
 		</div>
 		<div class="face six" id="face6">
 			<div class="ls_leged">Write in this box. When you come back you will find the same content ;-)</div>
-			<div class="content editable" id="local_storage" onchange="setStorageElement();">
+			<div class="content editable" id="local_storage">
 
 			</div>
 			<div id="savels">save</div>
@@ -126,17 +119,18 @@
 		</div>
 	</div>
 </div>
+
 <div id="navigate">
 	click write, arrow-keys, alt, ctrl, cabs
 </div>
 
 <footer>
-Program and Idea by <a href="http://twitter.com/ufufuo">Daniel Scherrer</a><br>
-<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Design for <a href="http://typo3.com/">TYPO3</a> by <a href="https://twitter.com/#!/WrYBiT">Jens Hoffmann</a><br>
-<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Design Implementation by <a href="http://twitter.com/#!/berit_jensen">Berit Jensen</a>
+	Program and Idea by <a href="http://twitter.com/ufufuo">Daniel Scherrer</a><br>
+	<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Design for <a href="http://typo3.com/">TYPO3</a> by <a href="https://twitter.com/#!/WrYBiT">Jens Hoffmann</a><br>
+	<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Design Implementation by <a href="http://twitter.com/#!/berit_jensen">Berit Jensen</a>
 </footer>
 
-<script src="scripts/cube.js"></script>
+<script src="js/cube.js"></script>
 
 </body>
 </html>
