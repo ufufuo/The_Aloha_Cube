@@ -41,8 +41,40 @@
 
 </head>
 <body id="chbg">
+	http://www.gravatar.com/avatar/<?php echo md5(strtolower(trim("gernot.bernkopf@netural.com")));?>.jpg
+<div id="twitterbar">
+<p><a href="http://haymo.org"><img src="http://www.gravatar.com/avatar/7f3f1e000b09a2314b5261de53de0733.jpg" /><br />Haymo Meran</a></p>
+<p><a href="http://twitter.com/blacktarmac"><img src="http://www.gravatar.com/avatar/c84901471a3d6c401c37239dda64c6ff.jpg" /><br />Clemens Prerovsky</a></p>
+<p><a href="http://twitter.com/balupton"><img src="http://www.gravatar.com/avatar/cc4c27bbac18afe33fdce155758d854d.jpg" /><br />Benjamin Lupton</a></p>
+<p><a href="http://twitter.com/nka_11"><img src="http://www.gravatar.com/avatar/d8c4dff393bc79059becdd9194df912d.jpg" /><br />Nicolas Karageuzian</a></p>
+<p><a href="http://gentics.com"><img src="http://www.gravatar.com/avatar/dbc8cd8da5024eba7ffc2f5713e833f7.jpg" /><br />Tobias Steiner </a></p>
+<p><a href="http://www.jotschi.de"><img src="http://www.gravatar.com/avatar/9085551c61f6ce3381f4a20fef542833.jpg" /><br />Johannes Schüth</a></p>
+<p><a href="http://twitter.com/taoma_k"><img src="http://www.gravatar.com/avatar/e1b92304c583f1f746c3e85f389a8b81.png" /><br />Thomas Lété</a></p>
+<p><a href="http://www.reaklab.com"><img src="http://www.gravatar.com/avatar/ba0551674de01922abdb4724831e66bb.jpg" /><br />Romain Carlier</a></p>
+<p><a href="http://twitter.com/rene_kapusta"><img src="http://www.gravatar.com/avatar/1b9509152c6e76062860a80bdfa02529.jpg" /><br />Rene Kapusta</a></p>
+<p><a href="http://petrosalema.com"><img src="http://www.gravatar.com/avatar/2087327e79d09b56ce8572e6f363abff.jpg" /><br />Petro Salema</a></p>
+<p><a href="http://bergie.iki.fi"><img src="http://nemein.com/en/midcom-serveattachmentguid-1df22b90b65b14422b911df835f25030ee37b967b96/thumbnail_bergie_haydarpasa3.jpg" /><br />Henri Bergius</a></p>
+<p><a href="http://twitter.com/webcms"><img src="http://www.gravatar.com/avatar/7f3f1e000b09a2314b5261de53de0733.jpg" /><br />Klaus-M. Schremser</a></p>
+<p><a href="http://twitter.com/medenhofer"><img src="http://www.gravatar.com/avatar/986577dceaa4a3a534b0832b8c2c4471.jpg" /><br />Martin Edenhofer</a></p>
+<p><a href="http://twitter.com/rworth"><img src="http://www.gravatar.com/avatar/d92ea7772f465256ad836de1ce642b37.jpg" /><br />Richard D. Worth</a></p>
+<p><a href="http://twitter.com/hlubek"><img src="http://www.gravatar.com/avatar/2a244c5ed94d92d288444604360a919a.jpg" /><br />Christopher Hlubek</a></p>
+<p><a href="http://twitter.com/berit_jensen"><img src="http://www.gravatar.com/avatar/fcc2ab2f32e0da536e0620ab0820c88d.jpg" /><br />Berit Jensen</a></p>
+<p><a href="http://twitter.com/scott_gonzalez"><img src="http://www.gravatar.com/avatar/35da631954825179143c86fa42a10954.jpg" /><br />Scott González</a></p>
+<p><a href="http://twitter.com/bassistance"><img src="http://www.gravatar.com/avatar/a9d4d2558b560b0ef168ced0f6c5198c.jpg" /><br />Jörn Zaefferer</a></p>
+<p><a href="http://gentics.com"><img src="http://www.gravatar.com/avatar/92df2d6cd31e77059362aabbf9bbc543.jpg" /><br />Norbert Pomaroli</a></p>
+<p><a href="http://www.salzburgresearch.at"><img src="http://www.gravatar.com/avatar/225267813448c9526a9875cc98a95137.jpg" /><br />Szaby Grünwald</a></p>
+<p><a href="http://www.netural.com"><img src="http://www.gravatar.com/avatar/81d3137c1fdc6f61fc450a3484b82d69.jpg" /><br />Gernot Bernkopf</a></p>
+<p><a href="http://tapo-it.at"><img src="" /><br />Herbert Poul</a></p>
+<p><a href="http://gentics.com"><img src="" /><br />Christian Peschta </a></p>
+<p><a href="http://twitter.com/#!/ufufuo"><img src="http://www.gravatar.com/avatar/f5170db042f5011c63e9a3cc1b03f9d7.jpg" /><br />Daniel Scherrer</a></p> 
+<p><a href="http://score.loria.fr"><img src="" /><br />Bogdan Flueras</a></p>
+<p><a href="http://www.dfki.de/~germesin"><img src="" /><br />Sebastian Germesin</a></p>
+<p><a href="http://www.fb-berlin.de"><img src="" /><br />Jan Koch</a></p>
+<p><a href="http://www.intergraph.com/global/at/"><img src="" /><br />Franz Buchinger</a></p>
+<p><a href=""><img src="" /><br />Stefan Dotti</a></p>
+<p><a href="http://www.segments.at"><img src="" /><br />Ivo Radulovski</a></p></div>
+
 <!--
-<div id="twitterbar"></div>
 <script src="scripts/MacStyleDock.js"></script>
 -->
 <div id="spacing"></div>
@@ -71,7 +103,7 @@
 		<!-- should use webworker for this but they don't have access to DOM :-/ -->
 		<div class="info" id="infobox">JavaScript animated Canvas-elements use a large amount of processor power!<br>(only for fast devices)</div>
 		<div class="face three" id="face3">
-			<video src="media/haymodance.mp4" loop="1" controls="1" autoplay></video>
+			<video id="player"  src="media/haymodance.mp4" loop="1" controls="1" autoplay></video>
 			<div class="comment editable">dancing <a href="http://twitter.com/#!/draftkraft">Haymo Meran</a><br>laughing by <a href="http://twitter.com/#!/balupton">Benjamin Lupton</a></div>
 		</div>
 		<div class="face four" id="face4">

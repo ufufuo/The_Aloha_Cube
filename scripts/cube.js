@@ -65,6 +65,9 @@ function initSys(){
 	$('#frontfloat')[0].style.webkitTransform = "scaleX(0.1) scaleY(0.1) translateZ(0px)";
 	$('#local_storage')[0].innerHTML = getStorageElement('cubeLSdemo');
 	setTimeout('initKeys()', 2000);
+	setTimeout( function() {
+		$('#player').attr('muted', true);
+	}, 100);
 }
 
 function initKeys(){

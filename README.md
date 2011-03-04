@@ -1,6 +1,6 @@
 # The Aloha Cube
 
-Created at the [Aloha Editor DevCon Vienna 2011](http://aloha-editor.org/wiki/Aloha_Editor_Dev_Con_Vienna_11) by [Daniel Scherrer](http://twitter.com/ufufuo). Inspired by the work of [Paul Hayes](http://www.paulrhayes.com/).
+Created at the [Aloha Editor DevCon Vienna 2011](http://aloha-editor.org/wiki/Aloha_Editor_Dev_Con_Vienna_11) by [Daniel Scherrer](http://twitter.com/ufufuo). Inspired by the work of [Paul Hayes](http://www.paulrhayes.com/) and [Zachary Johnson](http://www.zachstronaut.com/).
 
 
 Thanks to all the following who made this possible:

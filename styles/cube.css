@@ -349,3 +349,6 @@ canvas#indicator{
 	top:5px;
 	left:5px;
 }
+#twitterbar p a img{
+	width: 80px;
+}
