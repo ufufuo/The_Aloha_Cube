@@ -5,6 +5,7 @@
 *   Aloha Editor developer conference at Gentics in Vienna 2011                *
 *                                                                              *
 *   created and idea by Daniel Scherrer 2011                                   *
+*   edited Haymo Meran (http://twitter.com/draftkraft)
 *   Aloha Editor Menu Desgin for TYPO3 by Jens Hoffmann                        *
 *   Aloha Editor Menu Desgin Implementation by Berit Jensen                    *
 *                                                                              *
@@ -21,7 +22,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>the Aloha Cube</title>
 	<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
-	<script src="jquery-ui-1.8.9.custom.min.js"></script>
+	<script src="scripts/jquery-ui-1.8.9.custom.min.js"></script>
+	<script src="scripts/MacStyleDock.js"></script>
+	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
 	
 	<!-- load Aloha Editor core. You may need to adjust the base path. -->
 	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
@@ -384,6 +387,12 @@ canvas#indicator{
 	padding:10px;
 }
 
+#twitterbar {
+	position:absolute;
+	top:5px;
+	left:5px;
+}
+
 </style>	
 
 </head>
@@ -443,8 +452,8 @@ canvas#indicator{
 
 <footer>
 Program and Idea by <a href="http://twitter.com/#!/ufufuo">Daniel Scherrer</a><br>
-<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Desgin for <a href="http://typo3.com/">TYPO3</a> by <a href="https://twitter.com/#!/WrYBiT">Jens Hoffmann</a><br>
-<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Desgin Implementation by <a href="http://twitter.com/#!/berit_jensen">Berit Jensen</a>
+<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Design for <a href="http://typo3.com/">TYPO3</a> by <a href="https://twitter.com/#!/WrYBiT">Jens Hoffmann</a><br>
+<a href="http://aloha-editor.org/">Aloha Editor</a> Menu Design Implementation by <a href="http://twitter.com/#!/berit_jensen">Berit Jensen</a>
 </footer>
 
 <script type="text/javascript">
@@ -588,6 +597,86 @@ function initKeys(){
 		}
 	});
 }
+
+/* twitter dock */
+
+ //--> unstiled and the scripts/MacStyleDock.js has to be rewritten for right implementation
+
+var dock = new MacStyleDock(
+	document.getElementById('twitterbar'),
+	[
+	{
+		name      : 'http://a0.twimg.com/profile_images/1246935563/passport_photo_',
+		extension : '.jpg',
+		sizes     : ['mini', 'small_normal'],
+		onclick   : function(){ 
+                        window.location = 'http://twitter.com/#!/ufufuo';
+                      }
+        },
+        {
+        	name      : 'http://a1.twimg.com/profile_images/69881019/haymo_grey_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/draftkraft';
+                      }
+        },
+        {
+        	name      : 'http://a3.twimg.com/profile_images/92915898/twitterlogo_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/blacktarmac';
+                      }
+        },
+        {
+        	name      : 'http://a0.twimg.com/profile_images/277070804/n206700536_30532208_8076_copy_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/balupton';
+                      }
+        },
+        {
+        	name      : 'http://a2.twimg.com/profile_images/1175951166/avatar1_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/nka_11';
+                      }
+        },
+        {
+        	name      : 'http://a1.twimg.com/profile_images/1041686326/thomas3_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/taoma_k';
+                      }
+        },
+        {
+        	name      : 'http://a0.twimg.com/profile_images/854919519/rene_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/rene_kapusta';
+                      }
+        },
+        {
+        	name      : 'http://a0.twimg.com/profile_images/1170653292/bergie_haydarpasa2_',
+        	extension : '.jpg',
+        	sizes     : ['mini', 'small_normal'],
+        	onclick   : function(){
+                        window.location = 'http://twitter.com/#!/bergie';
+                      }
+        }
+	],
+	12,
+	48,
+	2);
+
+  
+/* /twitter dock */
+
 
 /* MO */
 var cX = 0;
