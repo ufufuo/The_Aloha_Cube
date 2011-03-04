@@ -1,3 +1,14 @@
+<?php
+	# Check User Agent
+	$nocheck = isset($_GET['nocheck']);
+	$ua = $_SERVER['HTTP_USER_AGENT'];
+	$regex = '/(Version\\/5\\.[^ ]+ Safari|Chrome\\/11)/';
+	$result = preg_match($regex, $ua);
+	if ( !$result && !$nocheck ) {
+		header('Location: nogo.html');
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="en-US" id="aloha-cube" xmlns:foaf="http://xmlns.com/foaf/0.1/">
 <head>

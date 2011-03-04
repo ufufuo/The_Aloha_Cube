@@ -108,12 +108,7 @@ a:hover {
 #chbg {
   background-color: #0091c1;
 }
-#cube #face1,
-#cube #face2,
-#cube #face3,
-#cube #face4,
-#cube #face5,
-#cube #face6 {
+#cube .face {
   -webkit-transition: -webkit-transform 2s linear;
   -moz-transition: -moz-transform 2s linear;
   -o-transition: -o-transform 2s linear;
@@ -122,8 +117,6 @@ a:hover {
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
-#cube .face {
   position: absolute;
   height: 512px;
   width: 512px;
@@ -166,27 +159,6 @@ a:hover {
   height: 512px;
   z-index: 3;
 }
-#frontfloat {
-  -webkit-transition: -webkit-transform 2s linear;
-  -moz-transition: -moz-transform 2s linear;
-  -o-transition: -o-transform 2s linear;
-  transition: transform 2s linear;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: translateZ(256px);
-  -moz-transform: translateZ(256px);
-  -o-transform: translateZ(256px);
-  transform: translateZ(256px);
-  position: absolute;
-  color: #FFFFFF;
-  padding: 40px;
-  width: 432px;
-  height: 432px;
-  overflow: auto;
-  z-index: 5;
-}
 #cube .two .content {
   position: absolute;
   background-image: url(../img/logo/logo_4.png);
@@ -198,6 +170,10 @@ a:hover {
   -o-transform: rotateY(90deg) translateZ(256px);
   transform: rotateY(90deg) translateZ(256px);
   text-align: center;
+}
+#cube .three video {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 #cube .four {
   background-image: url(../img/logo/logo_2.png);
@@ -222,6 +198,9 @@ a:hover {
   -o-transform: rotateY(-90deg) translateZ(256px);
   transform: rotateY(-90deg) translateZ(256px);
 }
+#cube .six .content {
+  height: 300px;
+}
 #cube .one,
 #cube .three,
 #cube .four,
@@ -230,8 +209,26 @@ a:hover {
   background-color: rgba(0, 126, 179, 0.6);
   border: 1px solid #555;
 }
-#face6 .content {
-  height: 300px;
+#frontfloat {
+  -webkit-transition: -webkit-transform 2s linear;
+  -moz-transition: -moz-transform 2s linear;
+  -o-transition: -o-transform 2s linear;
+  transition: transform 2s linear;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(256px);
+  -moz-transform: translateZ(256px);
+  -o-transform: translateZ(256px);
+  transform: translateZ(256px);
+  position: absolute;
+  color: #FFFFFF;
+  padding: 40px;
+  width: 432px;
+  height: 432px;
+  overflow: auto;
+  z-index: 5;
 }
 #navigate, footer {
   position: absolute;
@@ -267,10 +264,6 @@ canvas#indicator {
 .comment {
   max-height: 120px;
   overflow: auto;
-}
-#face3 video {
-  margin-top: 20px;
-  margin-bottom: 5px;
 }
 #trigger_canvas, #savels, #dells {
   -webkit-transition: -webkit-transform 2s linear;
