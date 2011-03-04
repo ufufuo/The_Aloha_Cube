@@ -12,6 +12,24 @@
 	var myImage = new Image();
 	myImage.src = "img/pic2.png";
 
+	// Transition and Transform
+	$.fn.transistion = function(value){
+		return $(this).css({
+			'-webkit-transition': value,
+			'-moz-transition': value,
+			'-o-transition': value,
+			'transition': value
+		});
+	};
+	$.fn.transform = function(value){
+		return $(this).css({
+			'-webkit-transform': value,
+			'-moz-transform': value,
+			'-o-transform': value,
+			'transform': value
+		});
+	};
+
 	/**
 	 * The Aloha Cube
 	 */
@@ -68,8 +86,8 @@
 			$('#navigate').animate({opacity:1}, 5000);
 			$('footer').animate({opacity:1}, 5000);
 			$('#chbg').animate({backgroundColor: "#FFFFFF"}, 2000);
-			$('#face2')[0].style.webkitTransform = "scaleX(0.1) scaleY(0.1) translateZ(0px)";
-			$('#frontfloat')[0].style.webkitTransform = "scaleX(0.1) scaleY(0.1) translateZ(0px)";
+			$('#face2').transform("scaleX(0.1) scaleY(0.1) translateZ(0px)");
+			$('#frontfloat').transform("scaleX(0.1) scaleY(0.1) translateZ(0px)");
 
 			TheAlohaCube.restore();
 
@@ -121,9 +139,9 @@
 				switch(evt.keyCode) {
 					case 17: // ctrl
 						if (cubeZoom == 0){cubeZoom = 1}else{cubeZoom = 0}
-						$('#cube')[0].style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distBig*multi+"px)";
+						$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distBig*multi+"px)");
 						delay(2000);
-						$('#cube')[0].style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd*multi+"px)";
+						$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd*multi+"px)");
 
 					case 18: // alt
 						if (transNorm == 256){
@@ -133,21 +151,21 @@
 							transNorm = 256;
 							frontZoom = 1
 						}
-						$('#face2')[0].style.webkitTransform = "scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)";
-						$('#frontfloat')[0].style.webkitTransform = "scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)";
-						$('#trigger_canvas')[0].style.webkitTransform = "scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)";
+						$('#face2').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$('#frontfloat').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$('#trigger_canvas').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
 						break;
 
 					case 20: // caps
 						if (multi == 1){multi = -1}else{multi = 1}
-						$('#face1')[0].style.webkitTransform = "rotateX(90deg) translateZ("+256*multi+"px)";
-						$('#face2')[0].style.webkitTransform = "scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)";
-						$('#frontfloat')[0].style.webkitTransform = "scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)";
-						$('#trigger_canvas')[0].style.webkitTransform = "scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)";
-						$('#face3')[0].style.webkitTransform = "rotateY(90deg) translateZ("+256*multi+"px)";
-						$('#face4')[0].style.webkitTransform = "rotateY(180deg) translateZ("+256*multi+"px)";
-						$('#face5')[0].style.webkitTransform = "rotateY(-90deg) translateZ("+256*multi+"px)";
-						$('#face6')[0].style.webkitTransform = "rotateX(-90deg) translateZ("+256*multi+"px)";
+						$('#face1').transform("rotateX(90deg) translateZ("+256*multi+"px)");
+						$('#face2').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$('#frontfloat').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$('#trigger_canvas').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$('#face3').transform("rotateY(90deg) translateZ("+256*multi+"px)");
+						$('#face4').transform("rotateY(180deg) translateZ("+256*multi+"px)");
+						$('#face5').transform("rotateY(-90deg) translateZ("+256*multi+"px)");
+						$('#face6').transform("rotateX(-90deg) translateZ("+256*multi+"px)");
 						break;
 
 					case 37: // left
@@ -168,10 +186,10 @@
 				};
 
 				if (cubeZoom == 1) {
-					$('#cube')[0].style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd+"px)";
+					$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd+"px)");
 				}
 				else {
-					$('#cube')[0].style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)";
+					$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)");
 				}
 			});
 
