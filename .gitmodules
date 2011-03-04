@@ -1,0 +1,3 @@
+[submodule "vendor/amplify"]
+	path = vendor/amplify
+	url = https://github.com/appendto/amplify.git

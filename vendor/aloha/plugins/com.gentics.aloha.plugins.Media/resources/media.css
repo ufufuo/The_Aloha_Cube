@@ -1,0 +1,80 @@
+/* Aloha-Editor */
+button.GENTICS_multisplit-wide {
+	font: 11px tahoma,arial,helvetica;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	cursor: pointer;
+	background-color: white;
+	background-repeat: no-repeat;
+	text-align: left;
+	margin-left: -2px;
+	padding-left: 26px;
+}
+
+button.CONTRIA_mafolder {
+	background: url(plugins/aloha/plugins/com.contria.aloha.plugins.Media/resources/media_folder.png) no-repeat !important;
+	background-position: 0px 0px !important;
+}
+
+button.CONTRIA_mareturn {
+	background: url(plugins/aloha/plugins/com.contria.aloha.plugins.Media/resources/media_return.png) no-repeat !important;
+	background-position: -16px 0px !important;
+}
+
+button.CONTRIA_fbutton button:hover {
+	border: 1px solid #666666;
+}
+
+button.CONTRIA_fbutton button.x-btn-text:hover {
+	border: 0;
+	border-top: 1px solid #cccccc;
+}
+
+button.GENTICS_button_img,
+button.GENTICS_button_doc,
+button.GENTICS_button_audio,
+button.GENTICS_button_video{
+	background: url(plugins/aloha/plugins/com.contria.aloha.plugins.Media/resources/media_archiev.png) no-repeat !important;
+}
+
+button.GENTICS_button_img {
+	background-position: 0px 0px !important;
+}
+
+button.GENTICS_button_doc {
+	background-position: -16px 0px !important;
+}
+
+button.GENTICS_button_audio {
+	background-position: -32px 0px !important;
+}
+
+button.GENTICS_button_video {
+	background-position: -48px 0px !important;
+}
+
+button.GENTICS_button_img_align_left,
+button.GENTICS_button_img_align_none,
+button.GENTICS_button_img_align_right,
+button.GENTICS_button_img_border,
+button.GENTICS_button_img_title,
+button.GENTICS_button_p_align_center,
+button.GENTICS_button_p_right{
+	background: url(plugins/aloha/plugins/com.contria.aloha.plugins.Media/resources/media_img.png) no-repeat !important;
+}
+button.GENTICS_button_img_align_left{
+	background-position: 0px 0px !important;
+}
+button.GENTICS_button_img_align_none{
+	background-position: -16px 0px !important;
+}
+button.GENTICS_button_img_align_right{
+	background-position: -32px 0px !important;
+}
+button.GENTICS_button_img_border{
+	background-position: -48px 0px !important;
+}
+button.GENTICS_button_img_title{
+	background-position: -64px 0px !important;
+}
+
