@@ -5,7 +5,7 @@
 *   Aloha Editor developer conference at Gentics in Vienna 2011                *
 *                                                                              *
 *   created and idea by Daniel Scherrer 2011                                   *
-*   edited Haymo Meran (http://twitter.com/draftkraft)
+*   modified by Haymo Meran (http://twitter.com/draftkraft)                    *
 *   Aloha Editor Menu Desgin for TYPO3 by Jens Hoffmann                        *
 *   Aloha Editor Menu Desgin Implementation by Berit Jensen                    *
 *                                                                              *
@@ -68,7 +68,8 @@
 
 		</div>
 		<div id="trigger_canvas" onmouseover="ShowContent('infobox'); return true;" onmouseout="HideContent('infobox'); return true;">turn canvas on</div>
-		<div class="info" id="infobox">JavaScript animated Canvas-elements use a large amount of processor power!<br>(only for fast computers)</div>
+		<!-- should use webworker for this but they don't have access to DOM :-/ -->
+		<div class="info" id="infobox">JavaScript animated Canvas-elements use a large amount of processor power!<br>(only for fast devices)</div>
 		<div class="face three" id="face3">
 			<video src="media/haymodance.mp4" loop="1" controls="1" autoplay></video>
 			<div class="comment editable">dancing <a href="http://twitter.com/#!/draftkraft">Haymo Meran</a><br>laughing by <a href="http://twitter.com/#!/balupton">Benjamin Lupton</a></div>
@@ -88,13 +89,13 @@
 			<div class="content editable" id="local_storage" onchange="setStorageElement();">
 
 			</div>
-			<div id="savels">save storage</div>
-			<div id="dells">clear storage</div>
+			<div id="savels">save</div>
+			<div id="dells">reset</div>
 		</div>
 	</div>
 </div>
 <div id="navigate">
-	arrow-keys, alt, ctrl, click, cabs
+	click write, arrow-keys, alt, ctrl, cabs
 </div>
 
 <footer>
