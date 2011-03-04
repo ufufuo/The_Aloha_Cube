@@ -18,14 +18,14 @@
 <html lang="en-US" id="aloha-cube">
 <head>
 	<meta http-equiv=content-type content='text/html; charset=utf-8' />
-	<meta http-equiv="author" content="Daniel Scherrer (http://twitter.com/#!/ufufuo)" />
+	<meta http-equiv="author" content="Daniel Scherrer (http://twitter.com/ufufuo)" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>the Aloha Cube</title>
 	<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
 	<script src="scripts/jquery-ui-1.8.9.custom.min.js"></script>
 	<script src="scripts/MacStyleDock.js"></script>
 	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
-	
+
 	<!-- load Aloha Editor core. You may need to adjust the base path. -->
 	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
 	<script type="text/javascript" src="aloha/aloha.js"></script>
@@ -100,16 +100,16 @@ a:hover{
 	text-shadow: #000000 2px 2px 3px;
 }
 
-	
+
 #test {
   	text-shadow: #000000 1px 1px 3px;
-	-webkit-perspective: 800; 
+	-webkit-perspective: 800;
 	-webkit-perspective-origin: 50% 200px;
-	-moz-perspective: 800; 
+	-moz-perspective: 800;
 	-moz-perspective-origin: 50% 200px;
-	-o-perspective: 800; 
+	-o-perspective: 800;
 	-o-perspective-origin: 50% 200px;
-	perspective: 800; 
+	perspective: 800;
 	perspective-origin: 50% 200px;
 }
 
@@ -135,7 +135,7 @@ a:hover{
 }
 
 #chbg {
-	background-color:#0091c1;	
+	background-color:#0091c1;
 }
 
 #cube #face1,
@@ -165,7 +165,7 @@ a:hover{
 	-moz-border-radius: 3px;
 	-o-border-radius: 3px;
 	border-radius: 3px;
-}   
+}
 
 #cube .content {
 	color:#FFFFFF;
@@ -393,13 +393,13 @@ canvas#indicator{
 	left:5px;
 }
 
-</style>	
+</style>
 
 </head>
 <body id="chbg">
 <div id="twitterbar"></div>
 <div id="spacing"></div>
-<div id="test">	
+<div id="test">
 	<div id="cube">
 		<div class="face one" id="face1">
 			<div class="content editable">
@@ -413,12 +413,12 @@ canvas#indicator{
 			</div>
 			<div class="container">
 				<div id="startEl">
-				
+
 				</div>
 			</div>
 		</div>
 		<div id="frontfloat" class="editable">
-		
+
 		</div>
 		<div id="trigger_canvas" onmouseover="ShowContent('infobox'); return true;" onmouseout="HideContent('infobox'); return true;">turn canvas on</div>
 		<div class="info" id="infobox">JavaScript animated Canvas-elements use a large amount of processor power!<br>(only for fast computers)</div>
@@ -433,19 +433,19 @@ canvas#indicator{
 		</div>
 		<div class="face five" id="face5">
 			<div class="content editable">
-				
+
 			</div>
 		</div>
 		<div class="face six" id="face6">
 			<div class="ls_leged">Write in this box. When you come back you will find the same content ;-)</div>
 			<div class="content editable" id="local_storage" onchange="setStorageElement();">
-				
+
 			</div>
 			<div id="savels">save storage</div>
 			<div id="dells">clear storage</div>
 		</div>
 	</div>
-</div>	
+</div>
 <div id="navigate">
 	arrow-keys, alt, ctrl, click, cabs
 </div>
@@ -507,7 +507,7 @@ myImage.src = "pix/pic2.png";
 
 function drawIndicator(){
 	ctMSG = document.getElementById("indicator").getContext("2d");
-	ctMSG.clearRect(0,0,512,512); 
+	ctMSG.clearRect(0,0,512,512);
 	ctMSG.drawImage(myImage, contextX, contextY, 16, 16);
 	if(contextX<0 || contextX>496){dcontextX=-dcontextX}
 	if(contextY<0 || contextY>496){dcontextY=-dcontextY}
@@ -535,14 +535,14 @@ function initKeys(){
 			}else{
 				clearInterval(msgIndicator);
 				ctMSG = $('#indicator')[0].getContext("2d");
-				ctMSG.clearRect(0,0,512,512); 
+				ctMSG.clearRect(0,0,512,512);
 				cSwitch = 0;
 				$('#trigger_canvas')[0].innerHTML = "turn canvas on";
 			}
 	});
 	$('#savels').bind('click', function() { setStorageElement() });
 	$('#dells').bind('click', function() { delStorageElement() });
-	
+
 	$('body').keydown(function(evt) {
 		switch(evt.keyCode) {
 			case 17: // ctrl
@@ -550,7 +550,7 @@ function initKeys(){
 				$('#cube')[0].style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distBig*multi+"px)";
 				delay(2000);
 				$('#cube')[0].style.webkitTransform = "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd*multi+"px)";
-				
+
 			case 18: // alt
 				if (transNorm == 256){
 					transNorm = 100;
@@ -577,15 +577,15 @@ function initKeys(){
 			case 37: // left
 				yAngle -= 90;
 				break;
-			
+
 			case 38: // up
-				xAngle += 90;				
+				xAngle += 90;
 				break;
-			
+
 			case 39: // right
 				yAngle += 90;
 				break;
-				
+
 			case 40: // down
 				xAngle -= 90;
 				break;
@@ -609,7 +609,7 @@ var dock = new MacStyleDock(
 		name      : 'http://a0.twimg.com/profile_images/1246935563/passport_photo_',
 		extension : '.jpg',
 		sizes     : ['mini', 'small_normal'],
-		onclick   : function(){ 
+		onclick   : function(){
                         window.location = 'http://twitter.com/#!/ufufuo';
                       }
         },
@@ -674,7 +674,7 @@ var dock = new MacStyleDock(
 	48,
 	2);
 
-  
+
 /* /twitter dock */
 
 
@@ -723,9 +723,9 @@ function ReverseContentDisplay(d) {
 GENTICS.Aloha.settings = {
 	logLevels: {'error': false, 'warn': false, 'info': false, 'debug': false},
 	errorhandling : false,
-	ribbon: false,	
+	ribbon: false,
 	"i18n": {
-		"current": "de" 
+		"current": "de"
 	},
 	"repositories": {
 	 	"com.gentics.aloha.repositories.LinkList": {
@@ -742,7 +742,7 @@ GENTICS.Aloha.settings = {
 	 	"com.gentics.aloha.plugins.Format": {
 			config			: 	[ 'b', 'i', 'del', 'sub', 'sup', 'p', 'title', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'pre', 'removeFormat' ]
 		},
-	 	"com.gentics.aloha.plugins.List": { 
+	 	"com.gentics.aloha.plugins.List": {
 			config			:	[ 'ol', 'ul' ]
 		},
 	 	"com.gentics.aloha.plugins.Link": {
@@ -757,7 +757,7 @@ GENTICS.Aloha.settings = {
 		  	cssclassregex : '^(?!.*aloha-editor.com).*',
 		  	cssclass : 'external'
 		},
-	 	"com.gentics.aloha.plugins.Table": { 
+	 	"com.gentics.aloha.plugins.Table": {
 			config			:	[ 'table' ]
 		},
 		"com.gentics.aloha.plugins.Media": {
@@ -774,7 +774,7 @@ GENTICS.Aloha.settings = {
 							'url': '/content/',
 							'extra_headers':{'Accept':'application/json'},
 							'additional_params': {"location":""},
-							'www_encoded': false 
+							'www_encoded': false
 						}
 					}
 				}
