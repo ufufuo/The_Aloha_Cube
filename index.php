@@ -14,7 +14,7 @@
 
 
 ?><!DOCTYPE html>
-<html lang="en-US" id="the-aloha-cube">
+<html lang="en-US" id="aloha-cube">
 <head>
 	<meta http-equiv=content-type content='text/html; charset=utf-8' />
 	<meta http-equiv="author" content="Daniel Scherrer (http://twitter.com/#!/ufufuo)" />
@@ -22,9 +22,11 @@
 	<title>the Aloha Cube</title>
 	<script src="http://code.jquery.com/jquery-1.5.1.js"></script>
 	<script src="jquery-ui-1.8.9.custom.min.js"></script>
-	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
 	
+	<!-- load Aloha Editor core. You may need to adjust the base path. -->
+	<script>GENTICS_Aloha_base="/workspace/Aloha-Editor-test/The_Aloha_cube/aloha/";</script>
 	<script type="text/javascript" src="aloha/aloha.js"></script>
+	<!-- We did not concatenate the script to give you an overview about what is loaded. -->
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Format/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Table/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.List/plugin.js"></script>
@@ -32,10 +34,8 @@
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Ribbon/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.HighlightEditables/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Media/plugin.js"></script>
-	<!-- <script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.CropNResize/plugin.js"></script> -->
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.DragAndDropFiles/plugin.js"></script>
 	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.Image/plugin.js"></script>
-	<script type="text/javascript" src="aloha/plugins/com.gentics.aloha.plugins.VIE/plugin.js"></script>
 	<style type="text/css">
 
 .MAITEM_Filimg1{
@@ -428,7 +428,7 @@ canvas#indicator{
 			</div>
 		</div>
 		<div class="face six" id="face6">
-			<div class="ls_leged"><label>LocalStorage:</label> Whatever you write here, will be stored in your browser!</div>
+			<div class="ls_leged">Write in this box. When you come back you will find the same content ;-)</div>
 			<div class="content editable" id="local_storage" onchange="setStorageElement();">
 				
 			</div>
@@ -453,7 +453,7 @@ Program and Idea by <a href="http://twitter.com/#!/ufufuo">Daniel Scherrer</a><b
 
 function checkLSsupport(){					// check LocalStorage support
 	if(typeof(localStorage)=='undefined'){
-		alert('Your browser does not support HTML5 localStorage. Try upgrading.');
+		console.log('Your browser does not support HTML5 localStorage. Try upgrading.');
 		return false
 	}else{
 		return true
@@ -488,10 +488,6 @@ function delStorageElement(){
 }
 
 /* /LS functions */
-
-
-
-
 
 var xAngle = 0, yAngle = 0, twoLevel = 100, distStd = 100, distBig = 800, distNow, scaleStd = 1, scaleBig = 1.1, scaleNow;
 var transNorm = 100, frontZoom, multi = 1, cubeZoom = 0, distX, distY, cSwitch = 0;
