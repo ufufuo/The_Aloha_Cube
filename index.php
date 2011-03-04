@@ -10,7 +10,6 @@
 	<!-- Dependencies -->
 	<script src="vendor/jquery-1.5.1.min.js"></script>
 	<script src="vendor/jquery-ui-1.8.9.custom.min.js"></script>
-	<script src="vendor/jquery.color.js"></script>
 	<script src="vendor/amplify/core/amplify.core.js"></script>
 	<script src="vendor/amplify/store/amplify.store.js"></script>
 
