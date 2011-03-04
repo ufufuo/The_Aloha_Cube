@@ -272,7 +272,7 @@
 		 */
 		restore: function(){
 			var value = amplify.store('cube');
-			console.log('restore',value);
+			// console.log('restore',value);
 			$('#local_storage').html(value);
 			return true;
 		},
@@ -282,7 +282,7 @@
 		 */
 		save: function(){
 			var value = $('#local_storage').html();
-			console.log('set',value);
+			// console.log('set',value);
 			amplify.store('cube',value);
 			return true;
 		},
@@ -291,7 +291,7 @@
 		 * Reset the Saveable Content
 		 */
 		reset: function(){
-			console.log('reset');
+			// console.log('reset');
 			$('#local_storage').html('');
 			TheAlohaCube.save();
 			return true;
