@@ -96,8 +96,8 @@
 		<!-- should use webworker for this but they don't have access to DOM :-/ -->
 		<div class="info" id="infobox">JavaScript animated Canvas-elements use a large amount of processor power!<br>(only for fast devices)</div>
 		<div class="face three" id="face3">
-			<video id="player"  src="media/haymodance.mp4" loop="1" controls="1" autoplay></video>
-			<div class="comment editable">dancing <a href="http://twitter.com/#!/draftkraft">Haymo Meran</a><br>laughing by <a href="http://twitter.com/#!/balupton">Benjamin Lupton</a></div>
+			<video src="vid/haymodance.mp4" loop="1" controls="1" autoplay></video>
+			<div class="comment editable">dancing <a href="http://twitter.com/draftkraft">Haymo Meran</a><br>laughing by <a href="http://twitter.com/balupton">Benjamin Lupton</a></div>
 		</div>
 		<div class="face four" id="face4">
 			<div class="content editable">
