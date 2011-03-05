@@ -343,13 +343,6 @@ canvas#indicator {
   top: 0px;
   left: 5px;
 }
-#twitterbar p {
-  float: left;
-  margin: 0px;
-}
-#twitterbar p img {
-  width: 40px;
-}
-#twitterbar span {
-  display: none !important;
+#twitterbar img {
+  vertical-align:top;
 }
