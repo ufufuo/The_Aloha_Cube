@@ -15,6 +15,28 @@
 	var myImage = new Image();
 	myImage.src = "img/pic2.png";
 
+	// Elements
+	var
+		$localStorage = $('#local_storage'),
+		$startEl = $('#startEl'),
+		$navigate = $('#navigate'),
+		$footer = $('footer'),
+		$chbg = $('#chbg'),
+		$face1 = $('#face1'),
+		$face2 = $('#face2'),
+		$face3 = $('#face3'),
+		$face4 = $('#face4'),
+		$face5 = $('#face5'),
+		$face6 = $('#face6'),
+		$frontfloat = $('#frontfloat'),
+		$body = $('body'),
+		$savels = $('#savels'),
+		$dells = $('#dells'),
+		$trigger_canvas = $('#trigger_canvas'),
+		$infobox = $('#infobox'),
+		$indicator = $('#indicator'),
+		$cube = $('#cube');
+
 	// Transition and Transform
 	$.fn.transistion = function(value){
 		return $(this).css({
@@ -56,12 +78,12 @@
 		 * Initialise the Display of the Cube
 		 */
 		initSys: function ( ) {
-			$('#startEl').animate({opacity:0.2}, 5000);
-			$('#navigate').animate({opacity:1}, 5000);
-			$('footer').animate({opacity:1}, 5000);
-			$('#chbg').animate({'backgroundColor': "#FFFFFF"}, 2000);
-			$('#face2').transform("scaleX(0.1) scaleY(0.1) translateZ(0px)");
-			$('#frontfloat').transform("scaleX(0.1) scaleY(0.1) translateZ(0px)");
+			$startEl.animate({opacity:0.2}, 5000);
+			$navigate.animate({opacity:1}, 5000);
+			$footer.animate({opacity:1}, 5000);
+			$chbg.animate({'backgroundColor': "#FFFFFF"}, 2000);
+			$face2.transform("scaleX(0.1) scaleY(0.1) translateZ(0px)");
+			$frontfloat.transform("scaleX(0.1) scaleY(0.1) translateZ(0px)");
 
 			TheAlohaCube.restore();
 
@@ -78,25 +100,25 @@
 			var save = function(){
 				TheAlohaCube.save();
 			};
-			$('#local_storage').blur(save).change(save);
+			$localStorage.blur(save).change(save);
 
 			// Add Save Button
-			$('#savels').bind('click', function() {
+			$savels.bind('click', function() {
 				TheAlohaCube.save();
 			});
 
 			// Add Delete Button
-			$('#dells').bind('click', function() {
+			$dells.bind('click', function() {
 				TheAlohaCube.reset();
 			});
 
 			// Toggle Information with Canvas
-			$('#trigger_canvas')
+			$trigger_canvas
 				.mouseout(function(){
-					$('#infobox').hide();
+					$infobox.hide();
 				})
 				.mouseover(function(){
-					$('#infobox').show();
+					$infobox.show();
 				})
 				;
 
@@ -107,31 +129,31 @@
 			});
 
 			// Do Something
-			$('#trigger_canvas').bind('click', function() {
+			$trigger_canvas.bind('click', function() {
 				if ( cSwitch == 0 ) {
 					msgIndicator = setInterval(function(){
 						TheAlohaCube.drawIndicator();
 					},20);
 					cSwitch = 1;
-					$('#trigger_canvas').html("turn canvas off");
+					$trigger_canvas.html("turn canvas off");
 				}
 				else {
 					clearInterval(msgIndicator);
-					ctMSG = $('#indicator')[0].getContext("2d");
+					ctMSG = $indicator[0].getContext("2d");
 					ctMSG.clearRect(0,0,512,512);
 					cSwitch = 0;
-					$('#trigger_canvas').html("turn canvas on");
+					$trigger_canvas.html("turn canvas on");
 				}
 			});
 
 			// Bind to KeyEvents to move the cube
-			$('body').keydown(function(evt) {
+			$body.keydown(function(evt) {
 				switch(evt.keyCode) {
 					case 17: // ctrl
 						if (cubeZoom == 0){cubeZoom = 1}else{cubeZoom = 0}
-						$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distBig*multi+"px)");
+						$cube.transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distBig*multi+"px)");
 						//delay(2000);
-						$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd*multi+"px)");
+						$cube.transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd*multi+"px)");
 
 					case 18: // alt
 						if (transNorm == 256){
@@ -141,21 +163,21 @@
 							transNorm = 256;
 							frontZoom = 1
 						}
-						$('#face2').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
-						$('#frontfloat').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
-						$('#trigger_canvas').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$face2.transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$frontfloat.transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$trigger_canvas.transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
 						break;
 
 					case 20: // caps
 						if (multi == 1){multi = -1}else{multi = 1}
-						$('#face1').transform("rotateX(90deg) translateZ("+256*multi+"px)");
-						$('#face2').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
-						$('#frontfloat').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
-						$('#trigger_canvas').transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
-						$('#face3').transform("rotateY(90deg) translateZ("+256*multi+"px)");
-						$('#face4').transform("rotateY(180deg) translateZ("+256*multi+"px)");
-						$('#face5').transform("rotateY(-90deg) translateZ("+256*multi+"px)");
-						$('#face6').transform("rotateX(-90deg) translateZ("+256*multi+"px)");
+						$face1.transform("rotateX(90deg) translateZ("+256*multi+"px)");
+						$face2.transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$frontfloat.transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$trigger_canvas.transform("scaleX("+frontZoom+") scaleY("+frontZoom+") translateZ("+transNorm*multi+"px)");
+						$face3.transform("rotateY(90deg) translateZ("+256*multi+"px)");
+						$face4.transform("rotateY(180deg) translateZ("+256*multi+"px)");
+						$face5.transform("rotateY(-90deg) translateZ("+256*multi+"px)");
+						$face6.transform("rotateX(-90deg) translateZ("+256*multi+"px)");
 						break;
 
 					case 37: // left
@@ -176,10 +198,10 @@
 				};
 
 				if (cubeZoom == 1) {
-					$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd+"px)");
+					$cube.transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg) translateZ("+distStd+"px)");
 				}
 				else {
-					$('#cube').transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)");
+					$cube.transform("rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)");
 				}
 			});
 
@@ -273,7 +295,7 @@
 		restore: function(){
 			var value = amplify.store('cube');
 			// console.log('restore',value);
-			$('#local_storage').html(value);
+			$localStorage.html(value);
 			return true;
 		},
 
@@ -281,7 +303,7 @@
 		 * Store the Saveable Content
 		 */
 		save: function(){
-			var value = $('#local_storage').html();
+			var value = $localStorage.html();
 			// console.log('set',value);
 			amplify.store('cube',value);
 			return true;
@@ -292,7 +314,7 @@
 		 */
 		reset: function(){
 			// console.log('reset');
-			$('#local_storage').html('');
+			$localStorage.html('');
 			TheAlohaCube.save();
 			return true;
 		},
