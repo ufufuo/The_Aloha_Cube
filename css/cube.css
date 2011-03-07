@@ -340,9 +340,10 @@ canvas#indicator {
 }
 #twitterbar {
   position: absolute;
-  top: 0px;
+  top: 5px;
   left: 5px;
 }
 #twitterbar img {
   vertical-align:top;
+  cursor:pointer;
 }
